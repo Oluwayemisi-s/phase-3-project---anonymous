@@ -1,20 +1,11 @@
-import {useState, useEffect} from "react"
-import Profile from 'react'
+//import {useState} from "react"
+import Profile from './Profile'
 
-function ProfileContainer({suggested, genres, allMovies}){
+function ProfileContainer({profiles, suggested, genres, allMovies}){
 
-    const [profile, setProfile] =  useState([])
-    
-    // useEffect(() => {
-    //     fetch('')
-    //     .then((resp) => resp.json())
-    //     .then((data) => setProfile(data))
-    // },[])
-
-    const user_profile = profile.map(user => <Profile suggested={suggested} genres={genres} allMovies={allMovies}  key = {user.id} profile ={user}/>)
-    // console.log(suggested)
-    // console.log(allMovies)
-    // console.log(genres)
+    console.log(profiles)
+    const user_profile = profiles.map(profile => <Profile suggested={suggested} genres={genres} allMovies={allMovies}  key = {profile.id} profile = {profile}/>)
+   
     return (
         <div>
             {user_profile}

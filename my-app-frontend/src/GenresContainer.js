@@ -1,8 +1,10 @@
+import Genres from "./Genres"
+
 function GenresContainer({genres}){
 
-   const all_genres = genres.map((genre) => {
-    <Genres key={genres.id} genre={genre}/>
-   }) 
+   const all_genres = genres.map((genre) => 
+    <Genres genre={genre}/>
+   ) 
     return(
         <div>
             {all_genres}
