@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
 import App from './App';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 

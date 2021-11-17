@@ -1,10 +1,8 @@
 function Genres({genre}){
 
     return(
-        <div>
-            <article>
+        <div className = "MovieCard">
                 {genre}
-            </article>
         </div>
     )
 }

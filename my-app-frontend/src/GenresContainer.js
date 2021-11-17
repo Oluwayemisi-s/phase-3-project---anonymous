@@ -6,7 +6,7 @@ function GenresContainer({genres}){
     <Genres genre={genre}/>
    ) 
     return(
-        <div>
+        <div className = "MovieLine">
             {all_genres}
         </div>
     )

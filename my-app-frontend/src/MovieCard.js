@@ -1,15 +1,15 @@
-function AllMovies({movie}){
+function MovieCard({movie}){
 
     let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv${movie.thumbnail}`
 
     return (
-        <div>
+        <div className = "MovieCard">
              <img src = {img_src} alt = "thumbnail"/>
             <h3>{movie.title}</h3>
-            <p>{movie.description}</p>
+            {/* <p>{movie.description}</p> */}
             <p>{movie.runtime} minutes</p>
         </div>
     )
 }
-
-export default AllMovies;
+//asdas
+export default MovieCard;
