@@ -1,4 +1,5 @@
-function Suggested({movie}){
+
+function MovieDetail({movie}){
 
     return (
         <div>
@@ -10,4 +11,4 @@ function Suggested({movie}){
     )
 }
 
-export default Suggested;
+export default MovieDetail;

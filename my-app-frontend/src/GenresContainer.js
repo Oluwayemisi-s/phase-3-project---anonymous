@@ -1,12 +1,12 @@
 import Genres from "./Genres"
 
-function GenresContainer({genres}){
+function GenresContainer({genres, allMovies}){
 
-   const all_genres = genres.map((genre) => 
-    <Genres genre={genre}/>
+    const all_genres = genres.map((genre) => 
+    <Genres genre={genre} allMovies = {allMovies}/>
    ) 
     return(
-        <div className = "MovieLine">
+        <div className = "">
             {all_genres}
         </div>
     )

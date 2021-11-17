@@ -1,3 +1,5 @@
+import MovieDetail from "./MovieDetail";
+
 function MovieCard({movie}){
 
     let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv${movie.thumbnail}`
