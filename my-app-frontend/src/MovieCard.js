@@ -11,5 +11,5 @@ function MovieCard({movie}){
         </div>
     )
 }
-
+//asdas
 export default MovieCard;
