@@ -1,12 +1,12 @@
-import AllMovies from "./AllMovies"
+import MovieCard from "./MovieCard"
 
 function AllMoviesContainer({allMovies}){
 
     const allM = allMovies.map( movie => 
-        <AllMovies key={movie.id} movie={movie}/>
+        <MovieCard key={movie.id} movie={movie}/>
     )
     return(
-        <div>
+        <div >
             {allM}
         </div>
     )

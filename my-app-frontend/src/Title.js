@@ -1,5 +1,8 @@
 import {useState, useEffect} from 'react'
 import ProfileContainer from './ProfileContainer'
+import ReactDOM from "react-dom";
+import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
+
 
 function Title(){
     const [suggested, setSuggested] = useState([])
@@ -7,6 +10,7 @@ function Title(){
     const [allMovies, setAllMovies] = useState([])
     const [logIn, setLogIn] = useState(false)
     const [profiles, setProfiles] =  useState([])
+    const [disappear,setDisappear] = useState(false)
 
     useEffect(() => {
         fetch('http://localhost:9292/movies')
@@ -35,6 +39,7 @@ function Title(){
 
     function handleButtonClick(){
         setLogIn ((currentState) => !currentState)
+        setDisappear((cats)=> !cats)
     }
 
     // console.log("suggested:", suggested)
@@ -43,13 +48,21 @@ function Title(){
     // console.log("profiles:", profiles)
 
     return (
-        <div>
+        <div className = "Everything">
+            {logIn? <ProfileContainer suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
+            <div className = {disappear?"candy":""}>
             <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
             <button onClick={handleButtonClick}>
                 {logIn? "Log out" : "Log in"} 
             </button>
+{/* 
+            <NavLink to="/">
+                ProfileContainer
+            </NavLink> */}
 
-            {logIn? <ProfileContainer suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles}/> : null}
+            {/* {logIn? <NavLink to="/ProfileContainer">
+                ProfileContainer </NavLink> : <NavLink to="/">Title</NavLink> } */}
+            </div>
         </div>
     )
 
