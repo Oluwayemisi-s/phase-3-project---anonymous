@@ -1,11 +1,13 @@
+import AllMovies from "./AllMovies"
+
 function AllMoviesContainer({allMovies}){
 
-    const all = allmoves.map((movie) => {
+    const allM = allMovies.map( movie => 
         <AllMovies key={movie.id} movie={movie}/>
-    })
+    )
     return(
         <div>
-            {all}
+            {allM}
         </div>
     )
 }
