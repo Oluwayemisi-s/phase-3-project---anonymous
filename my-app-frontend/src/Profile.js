@@ -1,21 +1,23 @@
 import {useState} from 'react'
 import MainMenu from "./MainMenu"
-function Profile({profile, suggested, genres, allMovies}){
+function Profile({profile, suggested, genres, allMovies, user, setUser, setAppear}){
 
-    const [user, setUser] = useState(null)
+    // const [user, setUser] = useState(null)
 
     function handleProfileClick(){
         setUser(profile)
+        setAppear(current => !current)
     }
 
     return(
+       
         <div className = "profileCard">
-        <div onClick={handleProfileClick}>
-            <img src={profile.profile_img} alt = "user"/>
-            <p>{profile.user_name}</p>
-            {user? <MainMenu key={user.id} user = {user} name={profile.user_name} suggested={suggested} genres={genres} allMovies={allMovies} /> : null}
+            <div onClick={handleProfileClick}>
+                <img src={profile.profile_img} alt = "user"/>
+                <p>{profile.user_name}</p>
+            </div>
         </div>
-        </div>
+        
     )
 }
 export default Profile

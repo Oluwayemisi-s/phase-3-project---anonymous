@@ -1,4 +1,4 @@
-import Suggested from "./Suggested";
+import Suggested from "./MovieDetail";
 import MovieCard from "./MovieCard";
 
 function SuggestedContainer({suggested}){
