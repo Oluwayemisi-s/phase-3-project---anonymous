@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import MainMenu from "./MainMenu"
-function Profile({profile, suggested, genres, allMovies, user, setUser, setAppear}){
+function Profile({profile, suggested, genres, allMovies, user, setUser, setAppear, setMovie, setShow}){
 
     // const [user, setUser] = useState(null)
 
