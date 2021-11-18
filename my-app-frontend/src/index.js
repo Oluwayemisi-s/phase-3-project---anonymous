@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
 import App from './App';
+import LegalDisclaimers from './LegalDisclaimers';
 
 
 ReactDOM.render(
-  <Router>
+  <div>
+  
     <App />
-  </Router>,
+   
+   
+    
+  </div>,
   document.getElementById('root')
 );
 
