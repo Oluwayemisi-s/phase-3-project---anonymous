@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard"
 
-function AllMoviesContainer({allMovies, setMovie, setShow, setHideIt, setSketch}){
+function AllGenresContainer({allMovies, setMovie, setShow, setHideIt, setSketch}){
 
     const allM = allMovies.map( movie => 
         <MovieCard key={movie.id} movie={movie} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch}/>
@@ -12,4 +12,4 @@ function AllMoviesContainer({allMovies, setMovie, setShow, setHideIt, setSketch}
     )
 }
 
-export default AllMoviesContainer;
+export default AllGenresContainer;
