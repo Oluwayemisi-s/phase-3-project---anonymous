@@ -6,6 +6,7 @@ import AllMoviesContainer from "./AllMoviesContainer"
 import FakeDropDown from "./FakeDropDown"
 import DeleteProfilePage from "./DeleteProfilePage"
 import AllGenresContainer from "./AllGenresContainer"
+import ProfileForm from "./ProfileForm"
 
 
 function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, setDisappear, disappear}){
@@ -22,13 +23,24 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
     const [turnDeletePageOn,setturnDeletePageOn] = useState(false)
     const [disappearForGenre, setdisappearForGenre] =useState(true)
     const [appearForGenres, setappearForGenres] =useState(false)
+    const [hideForm, setHideForm] = useState(true)
+    const [search, setSearch] = useState("")
     
 
     function setterOfDisappear(){
         setDisappear((cats)=>!cats)
     }
 
+    function handleAddUser(e){
+        //add a user 
+        console.log("Hello!!!!")
+        setAppear(false)
+        setHideForm(currentState => !currentState)
 
+        //pageReload(e)
+      }
+
+      const filteredMovies = allMovies.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.genre.includes(search.toLowerCase()))
 
 
     // const movie_in_genre = allMovies.filter(movie => movie.genre.includes(genrez))
@@ -47,16 +59,15 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
                 </div>
            
             <div className = {disappear? "":"candy"} >
-                <button onClick ={setterOfDisappear}>Logout</button>
                 <div className = {appear ? "userProfileLine" : "candy"}>
                     {user_profile} 
-                    <button>Add User</button>
+                    <button onClick = {handleAddUser}>Add User</button>
                 </div>
                 <div className={disappearForGenre ? "": "candy"}>
                 <div className={hide ? "": "candy"}>
                     <div className={hideIt ? "" : "candy"}>
                         <div className = {appear ? "candy" : ""}>
-                            {user? <MainMenu setappearForGenres = {setappearForGenres} setGenrez = {setGenrez}setappearForGenres = {setappearForGenres} setdisappearForGenre={setdisappearForGenre} setturnDeletePageOn ={setturnDeletePageOn} setGoku ={setGoku} goku = {goku} pageReload = {pageReload} key={user.id} user = {user} name={user.user_name} suggested={suggested} genres={genres} allMovies={allMovies} setShow={setShow} setMovie={setMovie} setAppear={setAppear} setHideIt={setHideIt} setHide={setHide} setRenderMovies={setRenderMovies} setSketch={setSketch} setGenrez={setGenrez}/> : null}
+                            {user? <MainMenu setappearForGenres = {setappearForGenres} setGenrez = {setGenrez}setappearForGenres = {setappearForGenres} setdisappearForGenre={setdisappearForGenre} setturnDeletePageOn ={setturnDeletePageOn} setGoku ={setGoku} goku = {goku} pageReload = {pageReload} key={user.id} user = {user} name={user.user_name} suggested={suggested} genres={genres} allMovies={filteredMovies} setShow={setShow} setMovie={setMovie} setAppear={setAppear} setHideIt={setHideIt} setHide={setHide} setRenderMovies={setRenderMovies} setSketch={setSketch} setGenrez={setGenrez} search = {search} setSearch = {setSearch}/> : null}
                         </div>
                     </div>    
                 </div>
@@ -69,7 +80,10 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
                     <All
                 </div> */}
                 <div className = {sketch ? "" : "candy"}>
-                    {renderMovies ? <AllMoviesContainer allMovies={allMovies} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch}/> : null}
+                    {renderMovies ? <AllMoviesContainer allMovies={filteredMovies} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch} setSearch = {setSearch} search = {search}/> : null}
+                </div>
+                <div>
+                    {hideForm ? null : <ProfileForm pageReload = {pageReload} setAppear = {setAppear}/>}
                 </div>
                
         </div>
