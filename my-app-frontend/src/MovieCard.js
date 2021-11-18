@@ -2,7 +2,7 @@
 
 function MovieCard({setappearForGenres, movie, setShow, setMovie, setAppear, setHideIt, setSketch}){
 
-    let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv${movie.thumbnail}`
+    let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.thumbnail}`
 
     function handleMovieClick(){
         setMovie(movie)

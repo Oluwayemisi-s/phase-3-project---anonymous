@@ -1,10 +1,22 @@
 
 function DeleteProfilePage({pageReload, user}){
 
-function DeleteThatPerson(e){
+function deleteThatPerson(e){
   ///deleteperson 
-  pageReload(e)
+  console.log(user.id)
+  fetch (`http://localhost:9292/profiles/${user.id}`,{
+      method: 'DELETE',
+  })
+    .then (resp => resp.json())
+    .then (deleted => console.log("deleted the user"))
+
+    pageReload(e)
 }
+
+// const deleteUser = (id) => {
+//   profiles.filter((profile) => profile.id !== id)
+ 
+// }
 
 function loljk(e){
   pageReload(e)
@@ -14,7 +26,7 @@ function loljk(e){
     <div>
     <>YOU DONT WANNA DO THAT {user.user_name.toUpperCase()}</>
     <p>
-    <button onClick ={DeleteThatPerson}>YOU KNOW I DO</button>
+    <button onClick ={deleteThatPerson}>YOU KNOW I DO</button>
     </p>
     <p>
     <button onClick ={loljk}>LOL JK CHILL TAKE ME BACK</button>

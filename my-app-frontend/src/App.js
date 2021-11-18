@@ -3,7 +3,7 @@ import './App.css';
 import Title from './Title'
 import ProfileContainer from './ProfileContainer';
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Profile from './Profile';
 import LegalDisclaimers from './LegalDisclaimers';
 
@@ -18,9 +18,13 @@ function App() {
   return (
    
     <div>
-      <button onClick ={pageReload}> Refresh</button>
-      <Title pageReload ={pageReload} />
-    
+      {/* <Routes> */}
+       {/* //</Routes> <Route path = "/legal" >  */}
+          {/* <LegalDisclaimers /> */}
+        
+          <button onClick ={pageReload}> Refresh</button>
+          <Title pageReload ={pageReload} />     
+      {/* </Routes> */}
     </div>
 
 

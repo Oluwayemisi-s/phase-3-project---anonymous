@@ -11,6 +11,7 @@ function Title({pageReload}){
     const [logIn, setLogIn] = useState(false)
     const [profiles, setProfiles] =  useState([])
     const [disappear,setDisappear] = useState(false)
+    //const [loginDisappear, setLoginDisappear] = useState(true)
 
     useEffect(() => {
         fetch('http://localhost:9292/movies')
@@ -38,7 +39,7 @@ function Title({pageReload}){
 
 
     function handleButtonClick(){
-        setLogIn ((currentState) => !currentState)
+        setLogIn (true)
         setDisappear((cats)=> !cats)
     }
 
@@ -52,8 +53,8 @@ function Title({pageReload}){
             {logIn? <ProfileContainer pageReload = {pageReload} suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
             <div className = {disappear?"candy":""}>
             <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
-            <button onClick={handleButtonClick}>
-                {logIn? "Log out" : "Log in"} 
+            <button className = {logIn ? "candy" : ""} onClick={handleButtonClick}>
+                Log In
             </button>
 {/* 
             <NavLink to="/">
