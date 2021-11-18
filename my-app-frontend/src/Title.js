@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 
-function Title(){
+function Title({pageReload}){
     const [suggested, setSuggested] = useState([])
     const [genres, setGenres] =useState([])
     const [allMovies, setAllMovies] = useState([])
@@ -49,7 +49,7 @@ function Title(){
 
     return (
         <div className = "Everything">
-            {logIn? <ProfileContainer suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
+            {logIn? <ProfileContainer pageReload = {pageReload} suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
             <div className = {disappear?"candy":""}>
             <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
             <button onClick={handleButtonClick}>

@@ -64,6 +64,12 @@
   border: 10px solid blue;
 }
 
+.NavImage{
+  border: 10px solid blue;
+  width:10%;
+  align-items: flex-end;
+}
+
 
 @keyframes App-logo-spin {
   from {

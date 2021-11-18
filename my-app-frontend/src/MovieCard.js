@@ -1,6 +1,6 @@
 
 
-function MovieCard({movie, setShow, setMovie, setAppear, setHideIt, setSketch}){
+function MovieCard({setappearForGenres, movie, setShow, setMovie, setAppear, setHideIt, setSketch}){
 
     let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv${movie.thumbnail}`
 
@@ -9,9 +9,11 @@ function MovieCard({movie, setShow, setMovie, setAppear, setHideIt, setSketch}){
         setShow((cats) => !cats)
         setHideIt((dogs)=> !dogs)
         setSketch((apple) => !apple)
+        setappearForGenres(false)
     }
 
     return (
+
         <div onClick={handleMovieClick} className = "MovieCard">
              <img src = {img_src} alt = "thumbnail"/>
             <h3>{movie.title}</h3>
