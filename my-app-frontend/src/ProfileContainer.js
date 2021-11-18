@@ -22,11 +22,11 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
     const [turnDeletePageOn,setturnDeletePageOn] = useState(false)
     const [disappearForGenre, setdisappearForGenre] =useState(true)
     const [appearForGenres, setappearForGenres] =useState(false)
+    
 
     function setterOfDisappear(){
         setDisappear((cats)=>!cats)
     }
-
 
 
 
@@ -49,13 +49,13 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
             <div className = {disappear? "":"candy"} >
                 <button onClick ={setterOfDisappear}>Logout</button>
                 <div className = {appear ? "userProfileLine" : "candy"}>
-                    {user_profile}
+                    {user_profile} 
+                    <button>Add User</button>
                 </div>
                 <div className={disappearForGenre ? "": "candy"}>
                 <div className={hide ? "": "candy"}>
                     <div className={hideIt ? "" : "candy"}>
                         <div className = {appear ? "candy" : ""}>
-            
                             {user? <MainMenu setappearForGenres = {setappearForGenres} setGenrez = {setGenrez}setappearForGenres = {setappearForGenres} setdisappearForGenre={setdisappearForGenre} setturnDeletePageOn ={setturnDeletePageOn} setGoku ={setGoku} goku = {goku} pageReload = {pageReload} key={user.id} user = {user} name={user.user_name} suggested={suggested} genres={genres} allMovies={allMovies} setShow={setShow} setMovie={setMovie} setAppear={setAppear} setHideIt={setHideIt} setHide={setHide} setRenderMovies={setRenderMovies} setSketch={setSketch} setGenrez={setGenrez}/> : null}
                         </div>
                     </div>    

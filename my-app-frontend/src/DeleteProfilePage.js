@@ -2,6 +2,7 @@
 function DeleteProfilePage({pageReload, user}){
 
 function DeleteThatPerson(e){
+  ///deleteperson 
   pageReload(e)
 }
 
