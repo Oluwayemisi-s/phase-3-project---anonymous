@@ -1,6 +1,6 @@
 
 
-function MovieCard({movie, setShow, setMovie, setAppear, setHideIt}){
+function MovieCard({movie, setShow, setMovie, setAppear, setHideIt, setSketch}){
 
     let img_src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv${movie.thumbnail}`
 
@@ -8,6 +8,7 @@ function MovieCard({movie, setShow, setMovie, setAppear, setHideIt}){
         setMovie(movie)
         setShow((cats) => !cats)
         setHideIt((dogs)=> !dogs)
+        setSketch((apple) => !apple)
     }
 
     return (
