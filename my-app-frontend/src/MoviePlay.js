@@ -9,7 +9,7 @@ function MoviePlay({movie}){
             We made it
             <p>
             currently playing {movie.title}
-            <ReactPlayer controls url = 'https://www.youtube.com/watch?v=c3vuz-OMF2g' />
+            <ReactPlayer controls url = "https://www.youtube.com/watch?v=3KasqdsIaIs&list=PLHPTxTxtC0ibVZrT2_WKWUl2SAxsKuKwx&index=159" />
             </p>
         </div>
     )

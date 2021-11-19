@@ -50,6 +50,7 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
    
     return (
         <div>
+            <button className="button_design" onClick ={pageReload}> Log Out</button>
              <div className = {appearForGenres ? "":"candy"}>
                 <AllGenresContainer setappearForGenres ={setappearForGenres} appearForGenres = {appearForGenres} genrez ={genrez} allMovies = {allMovies} setMovie ={setMovie} setShow = {setShow} setHideIt = {setHideIt} setSketch ={setSketch} genre />
                 </div>
@@ -80,7 +81,7 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
                     <All
                 </div> */}
                 <div className = {sketch ? "" : "candy"}>
-                    {renderMovies ? <AllMoviesContainer allMovies={filteredMovies} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch} setSearch = {setSearch} search = {search}/> : null}
+                    {renderMovies ? <AllMoviesContainer setappearForGenres = {setappearForGenres} allMovies={filteredMovies} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch} setSearch = {setSearch} search = {search}/> : null}
                 </div>
                 <div>
                     {hideForm ? null : <ProfileForm pageReload = {pageReload} setAppear = {setAppear}/>}
