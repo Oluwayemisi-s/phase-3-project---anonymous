@@ -34,6 +34,8 @@ For this poject, we used several technologies to bring this app to life. There w
 
 # Front End Features (React)
 
+To start the frontend server, run: npm start
+
 For the front end, we used React to construct and render our needed components to populate our tables from Ruby. We elected to harness useEffect to make our fetches hitting different API ends points constructed in Ruby. With the fetches completed, we then used useState within React to toggle differnt states on and off depending on the users clicks. 
 From the CRUD method, we gave this application the ablilty to:
 
@@ -50,7 +52,7 @@ We gave our uses the ability to 'create' new profiles within our application. Us
 ## DELETE:
 *Delete*
 ---
-Finally, we also gave our users the ability to delete profiles. Using the DELETE method, a user can choose a profile and delete it. This then sends a request to the API end point matching the user ID wihtin the data base. It is then removed permanently removed from the database, and will not be present on the login screen after making the fetch reqeust to the database 
+Finally, we also gave our users the ability to delete profiles. Using the DELETE method, a user can choose a profile and delete it. This then sends a request to the API end point matching the user ID wihtin the data base. It is then permanently removed from the database, and will not be present on the login screen after making the fetch reqeust to the database.
 
 ---
 
