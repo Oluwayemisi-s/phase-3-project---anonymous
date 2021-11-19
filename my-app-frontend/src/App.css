@@ -11,6 +11,14 @@ html {
   background-color: rgba(0,0,0);
 }
 
+.LoginPage img {
+  display:flex;
+  justify-content: center;
+   height:80vh;
+   width:50vw;
+ }
+ 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -236,6 +244,19 @@ html {
   width: 10vh;
 }
 
+.LegalYoYo {
+  display:flex; 
+  flex-direction:column; 
+  justify-content: center;
+  color:white;
+  font-size: 50px;
+
+}
+
+.LegalYoYo button{
+width:10vw;
+}
+
 .AddNewUserLine .searchform label{
   display: flex;
   text-align: center;
@@ -290,6 +311,20 @@ button:after{
 button:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+
+
+button{
+  margin:10px 4px; 
+  width:80px;
+  height:40px;
+  color:#fff;
+  font-family:sans-serif;
+  text-transform:uppercase;
+  text-align: center;
+  text-decoration:none;
+  background-color:#FF6766;
 }
 
 /* .Everything .LoginButton{

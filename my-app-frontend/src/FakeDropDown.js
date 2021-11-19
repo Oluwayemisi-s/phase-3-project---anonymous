@@ -1,5 +1,5 @@
 
-function FakeDropDown({pageReload,user,setHide, setturnDeletePageOn}){
+function FakeDropDown({pageReload,user,setHide, setturnDeletePageOn, setLegalForm}){
 
   function loggingOftheOut(e){
     pageReload(e)
@@ -12,13 +12,20 @@ function FakeDropDown({pageReload,user,setHide, setturnDeletePageOn}){
     setHide((bears)=>!bears)
     console.log("firing")
   }
+
+  function setLegal (e){
+    setLegalForm((backs)=>!backs)
+    
+    setHide((bears)=>!bears)
+    console.log("firing")
+  }
   return (
     <div>
       <img src = {user.profile_img}></img>
       <div className="fakedropdown">
         <button>Audio</button>
         <button>Edit Profile</button>
-        <button>Legal Disclaims</button>
+        <button onClick = {setLegal}>Legal Disclaims</button>
         <button>Parental Controls</button>
         <button onClick = {setDeleteProfile}>Delete Profile</button>
         <button onClick ={loggingOftheOut}>LogOut</button>
