@@ -13,10 +13,14 @@ function AllMoviesContainer({allMovies, setMovie, setShow, setHideIt, setSketch,
     }
 
     return(
-        <div>
+        <>
+            <div className="searchform">
             <label>Search: <input type = "text" value = {search} onChange = {handleSearch}/></label>
+            </div>
+        <div className="MovieLine">
             {allM}
         </div>
+        </>
     )
 }
 

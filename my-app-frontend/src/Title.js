@@ -51,18 +51,13 @@ function Title({pageReload}){
     return (
         <div className = "Everything">
             {logIn? <ProfileContainer pageReload = {pageReload} suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
-            <div className = {disappear?"candy":""}>
-            <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
-            <button className = {logIn ? "candy" : ""} onClick={handleButtonClick}>
-                Log In
-            </button>
-{/* 
-            <NavLink to="/">
-                ProfileContainer
-            </NavLink> */}
-
-            {/* {logIn? <NavLink to="/ProfileContainer">
-                ProfileContainer </NavLink> : <NavLink to="/">Title</NavLink> } */}
+            <div className = {disappear?"candy":"LoginPage"}>
+                <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
+                <div className="LoginButton">
+                    <button className = {logIn ? "candy" : ""} onClick={handleButtonClick}>
+                        Log In
+                    </button>
+                </div>
             </div>
         </div>
     )

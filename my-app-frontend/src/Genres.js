@@ -18,8 +18,10 @@ const movie_to_display = movie_in_genre.slice(0,5).map(movie => <MovieCard setap
 
     return(
         <div >
+            <div style={{color: "white", fontSize: "32px"}}>
             {genre}
-            <div className = "MovieCard">
+            </div>
+            <div className = "MovieLine">
                 {movie_to_display}
             <button onClick={handleDisappear}>
                 All {genre}

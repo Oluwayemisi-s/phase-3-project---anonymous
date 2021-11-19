@@ -7,12 +7,14 @@ function MovieDetail({movie, SetShowMovie}){
     }
     return (
      
-        <div>
-            <img src={img_src} alt = "thumbnail" onClick ={GoToMovie}/>
-            <img src={img_src1} alt = "backdrop" onClick ={GoToMovie}/>
-            <h3>{movie.title}</h3>
+        <div className="MovieDetail">
+            <div className="MovieDetailPicture">
+                <img src={img_src} alt = "thumbnail" onClick ={GoToMovie}/>
+                <img src={img_src1} alt = "backdrop" onClick ={GoToMovie}/>
+            </div>
+            <h2>{movie.title}</h2>
+            <h4>{movie.runtime} minutes</h4>
             <p>{movie.description}</p>
-            <p>{movie.runtime} minutes</p>
         </div>
     )
 }

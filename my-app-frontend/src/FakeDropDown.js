@@ -15,12 +15,14 @@ function FakeDropDown({pageReload,user,setHide, setturnDeletePageOn}){
   return (
     <div>
       <img src = {user.profile_img}></img>
-    <button>Audio</button>
-    <button>Edit Profile</button>
-    <button>Legal Disclaims</button>
-    <button>Parental Controls</button>
-    <button onClick = {setDeleteProfile}>Delete Profile</button>
-    <button onClick ={loggingOftheOut}>LogOut</button>
+      <div className="fakedropdown">
+        <button>Audio</button>
+        <button>Edit Profile</button>
+        <button>Legal Disclaims</button>
+        <button>Parental Controls</button>
+        <button onClick = {setDeleteProfile}>Delete Profile</button>
+        <button onClick ={loggingOftheOut}>LogOut</button>
+      </div>  
     </div>
     )
 }
