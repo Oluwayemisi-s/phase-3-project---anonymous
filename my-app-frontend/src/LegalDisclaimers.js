@@ -1,12 +1,13 @@
 
-function LegalDisclaimers(){
+function LegalDisclaimers({pageReload}){
 
   return (
     <>
-    <div>
-      <>WE ARE ABOVE THE LAW</>
-      <button></button>
-      <>WE ACTUALLY DO NOT CONSENT TO ANY LAWSUITS AGAINST US, THANK YOU</>
+    <div className = "LegalYoYo">
+      <p>WE ARE ABOVE THE LAW</p>
+     
+      <p>WE ACTUALLY DO NOT CONSENT TO ANY LAWSUITS AGAINST US, THANK YOU</p>
+      <button onClick = {pageReload}>got it I wont sue U</button>
     </div>
     </>
     )

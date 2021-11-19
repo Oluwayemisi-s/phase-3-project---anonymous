@@ -52,7 +52,7 @@ function Title({pageReload}){
         <div className = "Everything">
             {logIn? <ProfileContainer pageReload = {pageReload} suggested={suggested} genres={genres} allMovies={allMovies} profiles = {profiles} disappear = {disappear} setDisappear ={setDisappear}/> : null}
             <div className = {disappear?"candy":"LoginPage"}>
-                <img src="https://image.shutterstock.com/image-vector/welcome-poster-spectrum-brush-strokes-260nw-1146069941.jpg" alt = "welcome"/>
+                <img src="https://i.imgur.com/CaBpbR4.png" alt = "welcome"/>
                 <div className="LoginButton">
                     <button className = {logIn ? "candy" : ""} onClick={handleButtonClick}>
                         Log In

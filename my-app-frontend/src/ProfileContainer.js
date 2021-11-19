@@ -7,6 +7,7 @@ import FakeDropDown from "./FakeDropDown"
 import DeleteProfilePage from "./DeleteProfilePage"
 import AllGenresContainer from "./AllGenresContainer"
 import ProfileForm from "./ProfileForm"
+import LegalDisclaimers from "./LegalDisclaimers"
 
 
 function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, setDisappear, disappear}){
@@ -24,6 +25,7 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
     const [disappearForGenre, setdisappearForGenre] =useState(true)
     const [appearForGenres, setappearForGenres] =useState(false)
     const [hideForm, setHideForm] = useState(true)
+    const [legalForm, setLegalForm] = useState(false)
     const [search, setSearch] = useState("")
     
 
@@ -68,7 +70,7 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
                 <div className={hide ? "": "candy"}>
                     <div className={hideIt ? "" : "candy"}>
                         <div className = {appear ? "candy" : ""}>
-                            {user? <MainMenu setappearForGenres = {setappearForGenres} setGenrez = {setGenrez}setappearForGenres = {setappearForGenres} setdisappearForGenre={setdisappearForGenre} setturnDeletePageOn ={setturnDeletePageOn} setGoku ={setGoku} goku = {goku} pageReload = {pageReload} key={user.id} user = {user} name={user.user_name} suggested={suggested} genres={genres} allMovies={filteredMovies} setShow={setShow} setMovie={setMovie} setAppear={setAppear} setHideIt={setHideIt} setHide={setHide} setRenderMovies={setRenderMovies} setSketch={setSketch} setGenrez={setGenrez} search = {search} setSearch = {setSearch}/> : null}
+                            {user? <MainMenu setLegalForm = {setLegalForm} setappearForGenres = {setappearForGenres} setGenrez = {setGenrez}setappearForGenres = {setappearForGenres} setdisappearForGenre={setdisappearForGenre} setturnDeletePageOn ={setturnDeletePageOn} setGoku ={setGoku} goku = {goku} pageReload = {pageReload} key={user.id} user = {user} name={user.user_name} suggested={suggested} genres={genres} allMovies={filteredMovies} setShow={setShow} setMovie={setMovie} setAppear={setAppear} setHideIt={setHideIt} setHide={setHide} setRenderMovies={setRenderMovies} setSketch={setSketch} setGenrez={setGenrez} search = {search} setSearch = {setSearch}/> : null}
                         </div>
                     </div>    
                 </div>
@@ -85,6 +87,9 @@ function ProfileContainer({pageReload, profiles, suggested, genres, allMovies, s
                 </div>
                 <div>
                     {hideForm ? null : <ProfileForm pageReload = {pageReload} setAppear = {setAppear}/>}
+                </div>
+                <div className = {legalForm ? "": "candy"}>
+                    {legalForm? <LegalDisclaimers pageReload ={pageReload} user ={user}/>:null}
                 </div>
                
         </div>

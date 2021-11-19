@@ -4,7 +4,7 @@ import AllMoviesContainer from "./AllMoviesContainer"
 import FakeDropDown from "./FakeDropDown";
 
 
-function MainMenu({setappearForGenres, setdisappearForGenre, setturnDeletePageOn, goku,setGoku, pageReload, user, suggested, genres, allMovies, setShow, setMovie, setAppear, setHideIt, setHide, setRenderMovies, setSketch, movie_in_genre, setGenrez, search, setSearch}){
+function MainMenu({setLegalForm, setappearForGenres, setdisappearForGenre, setturnDeletePageOn, goku,setGoku, pageReload, user, suggested, genres, allMovies, setShow, setMovie, setAppear, setHideIt, setHide, setRenderMovies, setSketch, movie_in_genre, setGenrez, search, setSearch}){
 
    
 
@@ -25,7 +25,7 @@ function MainMenu({setappearForGenres, setdisappearForGenre, setturnDeletePageOn
             {/* <label>Search: <input type = "text" value = {search} onChange = {handleSearch}/></label> */}
              <div onClick = {fakeDropDown} className = "NavImage">
                  <div className="dropdown">
-                {goku? <img src = {user.profile_img}/> : <FakeDropDown setHide ={setHide} pageReload = {pageReload} setturnDeletePageOn = {setturnDeletePageOn} user ={user}/>}  
+                {goku? <img src = {user.profile_img}/> : <FakeDropDown setLegalForm={setLegalForm} setHide ={setHide} pageReload = {pageReload} setturnDeletePageOn = {setturnDeletePageOn} user ={user}/>}  
                 </div> 
             </div>  
             <h1 style={{color: "white"}}>Welcome {user.user_name}! Here are our top picks for you</h1>
