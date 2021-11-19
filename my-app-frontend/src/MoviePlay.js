@@ -17,11 +17,10 @@ function MoviePlay({movie}){
 
     return(
         <div>
-            We made it
-            <p>
-            currently playing {movie.title}
+            <div className ="ImagePlayer">
+            Currently Playing {movie.title}...
             <ReactPlayer controls url = {movieLink()} />
-            </p>
+            </div>
         </div>
     )
 }

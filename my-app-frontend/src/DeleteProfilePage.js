@@ -23,8 +23,11 @@ function loljk(e){
 }
 
   return (
-    <div>
-    <>YOU DONT WANNA DO THAT {user.user_name.toUpperCase()}</>
+    <div className = "pleaseworkeasilypart2">
+      <div className="BoxForTextZZZ">
+    <p>YOU DON'T WANNA DO THAT {user.user_name.toUpperCase()}</p>
+    <img src ="https://data.whicdn.com/images/53606009/original.jpg" alt ="sketch"></img>
+    </div>
     <p>
     <button onClick ={deleteThatPerson}>YOU KNOW I DO</button>
     </p>
