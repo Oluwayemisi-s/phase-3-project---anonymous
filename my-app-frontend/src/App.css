@@ -11,12 +11,7 @@ html {
   background-color: rgba(0,0,0);
 }
 
-.LoginPage img {
-  display:flex;
-  justify-content: center;
-   height:80vh;
-   width:50vw;
- }
+
  
 
 .App-logo {
@@ -182,6 +177,10 @@ html {
   width: 50%;
 }
 
+.fakedropdown button{
+ margin:0
+}
+
 .MovieDetailPicture{
   display: flex;
   flex-direction: row;
@@ -215,6 +214,13 @@ html {
 .MovieDetail p {
   font-weight: bolder;
   font-size: 150%;
+}
+
+
+.MainTitle {
+  color:white;
+  font-weight: bolder;
+  font-size: 4em;
 }
 
 .userProfileLine{
@@ -267,6 +273,88 @@ width:10vw;
 .spaceBetween{
   width: 8vh;
 }
+
+.BoxForTitleImage{
+  display:flex;
+  display: row;
+  width: 100vw;
+  height: 80vh;
+  /* border: 10px solid blue; */
+}
+
+.BoxForFont{
+  display:flex;
+  display: row;
+  width: 100vw;
+  height: 8vh;
+  /* border: 10px solid blue; */
+}
+
+.BoxForFont .textSubtitle {
+  display:flex;
+  color:white;
+  font-size: 3em;
+  /* border: 10px solid blue; */
+}
+
+.SpaceBetweenFontLeft{
+  display:flex;
+  width: 35vw;
+    /* border: 10px solid green; */
+}
+
+.SpaceBetweenFontRight{
+  display:flex;
+  width: 20vw;
+    /* border: 10px solid green; */
+}
+
+
+.textSubtitle{
+  display:flex;
+  color:white;
+  /* border: 10px solid blue; */
+}
+
+.SpaceBetweenTitle{
+  display:flex;
+  width: 30vw;
+    /* border: 10px solid green; */
+}
+
+.BoxForTitleImage img{
+  display:flex;
+  width: 40vw;
+
+}
+
+
+.BoxForButton{
+  display:flex;
+  display: row;
+  width: 100vw;
+  height: 5vh;
+  /* border: 10px solid blue; */
+}
+
+.BoxForButton button{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  width: 5vw;
+  height: 3vh;
+  font-size: 1.5em;
+}
+
+.SpaceBetweenButton{
+  display:flex;
+  width: 47.5vw;
+    /* border: 10px solid green; */
+}
+
+
+
+
 
 
 
@@ -326,6 +414,9 @@ button{
   text-decoration:none;
   background-color:#FF6766;
 }
+
+
+
 
 /* .Everything .LoginButton{
   display:flex;
