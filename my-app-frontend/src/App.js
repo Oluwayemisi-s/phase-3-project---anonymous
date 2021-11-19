@@ -22,7 +22,7 @@ function App() {
        {/* //</Routes> <Route path = "/legal" >  */}
           {/* <LegalDisclaimers /> */}
         
-          <button className="button_design" onClick ={pageReload}> Refresh</button>
+          
           <Title pageReload ={pageReload} />     
       {/* </Routes> */}
     </div>

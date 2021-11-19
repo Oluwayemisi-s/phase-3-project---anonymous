@@ -15,7 +15,7 @@ function SuggestedContainer({setappearForGenres, suggested, setMovie, setShow,se
         <div>
             <div className = "MovieLine">
             {suggested_movies}
-            <button onClick={handleHide}>
+            <button onClick={handleHide} className = "ButtonOnMainMenu">
                 All Movies
             </button>
             </div>

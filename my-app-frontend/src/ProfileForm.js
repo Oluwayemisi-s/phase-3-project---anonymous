@@ -34,17 +34,22 @@ export default function ProfileForm ({pageReload, setAppear}) {
 
 
     return(
-        <div>
-            <form onSubmit = {handleFormSubmit}>
+        <div className = "AddNewUserLine">
+            <form onSubmit = {handleFormSubmit}  className = "searchform">
+               
                 <label>Enter your name:
                     <input onChange = {handleFormInput} type = "text" name = "user_name" value = {form.user_name}/>
                 </label>
-
+                
+                <div className = "spaceBetween">
+                </div>
                 <label>Enter your profile picture:
                     <input onChange = {handleFormInput} type = "text" name = "profile_img" value = {form.profile_img}/>
                 </label>
+                <div className = "spaceBetween">
+                </div>
 
-                <button>Submit</button>
+                <button className = "submitButtonZ">Submit</button>
 
             </form>
         </div>

@@ -7,7 +7,8 @@
 }
 
 html {
-  background-color: rgba(21,0,0);
+  /* background-color: rgba(21,0,0); */
+  background-color: rgba(0,0,0);
 }
 
 .App-logo {
@@ -46,14 +47,13 @@ html {
   flex-direction: column;
 }
 
-.LoginButton{
-  display: flex;
-  justify-content: center;
-  height: 200%;
-  width: 100%;
+/* .Everything .LoginButton button{
+  /* display: flex;
+  background:#f52626;
+  height: 1000px;
+  width: 1000px;
+  font-size: 500px; */
   /* This is the log in button on the title page, we created a div for this guy in the Title.js on lines 56 - 60. Was still trying to get this to look good before hopping off for the night.*/
-}
-
 .profileCard{
   display:flex;
   justify-content: center;
@@ -71,15 +71,9 @@ html {
   border-radius: 50%;
 }
 
-.userProfileLine{
-  display:flex;
-  flex-direction: row;
-}
 
-.userProfileLine button{
-  border-radius: 50%;
-  width: 10%;
-}
+
+
 
 .MovieLine{
   display:flex;
@@ -90,7 +84,7 @@ html {
 
 .searchform{
   display: flex;
-  justify-content: center;
+  margin-left: 100px;
   height: 30px;
   /* width: 20px; */
   color: white;
@@ -106,9 +100,10 @@ html {
 }
 
 .MovieLine button{
-  margin-top: 12%;
-  height: 150px;
-  width: 100px;
+  margin-top: 15vh;
+  border-radius: 50%; 
+  height: 10vh;
+  width: 5vw;
   background-color: grey;
   font-weight: bolder;
 }
@@ -119,12 +114,34 @@ html {
   border: 5px solid grey;
   color: white;
   margin: 15px;
+  width: 13vw;
+  height: 38vh;
+}
+.MovieCard:hover{
+  background:#f52626;
+  color: black;
+  border: 5px solid #f52626;
+  box-shadow: 20px 20px 200px rgba(255, 255, 255, 1);
+}
+
+
+.MovieCard h3{
+  display:flex;
+  overflow-wrap: break-word;
+  margin-left:0.4vh;
+  margin-bottom : 0;
+}
+
+.MovieCard p{
+  display:flex;
+  margin-left:0.4vh;
+
 }
 
 .MovieCard img{
   display: flex;
-  width: 200px;
-  height: 300px;
+  width: 13vw;
+  height: 30vh;
 }
 
 .NavImage{
@@ -148,6 +165,8 @@ html {
   /* align-items: flex-start; */
   border-radius: 50%;
 }
+
+
 
 .fakedropdown{
   display: flex;
@@ -194,19 +213,133 @@ html {
   display: flex;
   justify-content: space-evenly;
   /* border: 10px solid green; */
-  margin-top: 35%;
+  margin-top: 40vh;
   height: 100%;
   width: 100%;
 }
 
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userProfileLine button{
+  border-radius: 50%;
+  width: 10vh;
 }
+
+.AddNewUserLine{
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 10px solid green; */
+  margin-top: 40vh;
+  height: 100%;
+  width: 100%;
+}
+
+.AddNewUserLine button{
+  width: 10vh;
+}
+
+.AddNewUserLine .searchform label{
+  display: flex;
+  text-align: center;
+  font-size: 2em;
+  color:white;
+}
+
+.spaceBetween{
+  width: 8vh;
+}
+
+
+
+/* 
+body {
+  background-color: #012839;
+  text-align: center;
+  padding-top: 50px;
+} */
+
+.MovieLine .Button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#f52626;
+  color:#fff;
+}
+/* button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  /* transition:400ms ease all; */
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/* .Everything .LoginButton{
+  display:flex;
+  justify-content: center;
+} */
+
+
+/* .Everything .LoginButton butto
+n{
+  display:flex;
+  
+  background:#f52626;
+  text-align: center;
+  justify-content: center;
+  color:#fff;
+  border:none;
+
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 50%;
+}
+button:hover{
+  background:#fff;
+  color:#fff;
+} */
+/* button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  /* transition:400ms ease all; */
+/* 
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+} */
+
+
 

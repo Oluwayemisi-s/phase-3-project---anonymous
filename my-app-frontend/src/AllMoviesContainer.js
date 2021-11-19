@@ -1,9 +1,9 @@
 import MovieCard from "./MovieCard"
 
-function AllMoviesContainer({allMovies, setMovie, setShow, setHideIt, setSketch, setSearch, search}){
+function AllMoviesContainer({setappearForGenres, allMovies, setMovie, setShow, setHideIt, setSketch, setSearch, search}){
 
     const allM = allMovies.map( movie => 
-        <MovieCard key={movie.id} movie={movie} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch}/>
+        <MovieCard setappearForGenres = {setappearForGenres} key={movie.id} movie={movie} setMovie={setMovie} setShow={setShow} setHideIt={setHideIt} setSketch={setSketch}/>
     )
 
 
